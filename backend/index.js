@@ -2,9 +2,9 @@ import "dotenv/config";
 import "./config.js";
 import express from "express";
 import Todo from "./TodoModel.js";
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
-const app = express();
+const app = express();  
 app.use(express.json());
 
 app.get("/", (req, res) => {
