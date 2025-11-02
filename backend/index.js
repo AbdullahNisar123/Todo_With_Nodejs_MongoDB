@@ -25,7 +25,7 @@ app.post("/todo", async (req, res) => {
         await newTodo.save();
         res
             .status(201)
-            .json({ task: newTodo });
+            .json(newTodo);
     } catch (err) {
         res
             .status(400)
