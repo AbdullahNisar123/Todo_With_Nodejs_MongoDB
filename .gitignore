@@ -1,11 +1,16 @@
-# Node modules folder
-node_modules/
+# Ignore node modules (both frontend and backend)
+backend/node_modules/
+frontend/node_modules/
 
-# Environment variables file
-.env
+# Ignore environment files
+backend/.env
+frontend/.env
 
-# Log files
+# Logs
 *.log
+
+# Build folders (React build output)
+frontend/build/
 
 # System files
 .DS_Store
