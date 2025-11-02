@@ -2,10 +2,17 @@ import "dotenv/config";
 import "./config.js";
 import express from "express";
 import Todo from "./TodoModel.js";
+import cors from "cors";
 const PORT = process.env.PORT || 5000;
 
 const app = express();  
 app.use(express.json());
+
+app.use(cors({
+  origin: ["http://localhost:5173", "https://todo-frontend.vercel.app"], // apna frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}));
+
 
 app.get("/", (req, res) => {
     res.send("✅ Simple TODO App with Express + MongoDB running...");
