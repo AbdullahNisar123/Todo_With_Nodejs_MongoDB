@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: ["http://localhost:5173", "https://todo-frontend.vercel.app"], // apna frontend URL
+  origin: ["http://localhost:5173", "https://react-todo-app-with-backend.vercel.app"], // apna frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
 }));
 
